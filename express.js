@@ -12,11 +12,13 @@ app.get('/', (req, res) => {
 });
 
 app.get('/about', (req, res) => {
-  res.send('Ini adalah halaman about kamu😎')
+  //res.send('Ini adalah halaman about kamu😎')
+  res.render('about')
 });
 
 app.get('/contact', (req, res) => {
-  res.send('Ini adalah halaman kontak kamu😊')
+  //res.send('Ini adalah halaman kontak kamu😊')
+  res.render('contact')
 });
 
 app.use('/',(req,res) => {
