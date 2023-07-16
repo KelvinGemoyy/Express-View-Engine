@@ -8,7 +8,32 @@ app.set('view engine','ejs');
 app.get('/', (req, res) => {
   // res.send('Hai Kelvin,selamat website kamu telah berjalan😎')
   // res.sendFile('./index.html',{root:__dirname});
-  res.render('index')
+
+  const crush = [
+    {
+      nama:'Thirza Nur Zanetta❤ ',
+      kelas:'1 SMA',
+      umur:'16 Tahun',
+      status:'single',
+    },
+    {
+      nama:'Tasya Nur Hidayat ',
+      kelas:'1 SMA',
+      umur:'16 Tahun',
+      status:'single',
+    },
+    {
+      nama:'Khanza Najwa Thohira ',
+      kelas:'1 SMA',
+      umur:'16 Tahun',
+      status:'single',
+    }
+  ]
+
+  res.render('index',{
+      nama:'Muh.Kelvin Raditya',
+      orgYgDiSuka:crush,
+  });
 });
 
 app.get('/about', (req, res) => {
